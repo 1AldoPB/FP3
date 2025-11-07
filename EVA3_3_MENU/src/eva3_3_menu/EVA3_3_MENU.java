@@ -21,12 +21,13 @@ public class EVA3_3_MENU {
         do{
             imprimirMenu();
             opcion =sc.nextInt();
-            if(opcion ==1){
-            }else if (opcion ==2);{
-            
+            if(opcion == 1){
+                calcularPotencia();
+            }else if (opcion == 2);{
+            sumaNumeros();
             
             }
-        }while(opcion !=3);
+        }while(opcion != 3);
 
     }
    public static void imprimirMenu(){
@@ -47,8 +48,38 @@ public class EVA3_3_MENU {
            base=sc.nextInt();
            System.out.println("**********CALCULA EL EXPONENTE");
            exp=sc.nextInt();
-           
-           
+     //PENDIENTE EL CALCULO      
+           System.out.println(base + "elevado a " + exp + " = " + calcularPot(base,exp));
+   
+   
+   }
+   public static int  calcularPot(int base, int expo){
+       int resu= 1;
+       for (int i = 1; i <= expo; i++) {
+           resu= resu * base;
+       }
+   return resu;
+   
+   
+   
+   
+   
+   
+   }
+   public static void sumaNumeros(){
+   Scanner sc =new Scanner(System.in);
+   double num1,num2,resu;
+       System.out.println("BIENVENIDOS A SUMAR NUMEROS SELECCIONE 2 NUMEROS");
+       System.out.println("NUMERO 1");
+       num1=sc.nextDouble();
+       System.out.println("NUMERO 2");
+       num2=sc.nextDouble();
+       resu= num1+num2;
+       System.out.println("LA SUMA ES: " + resu);
+   
+   
+   
+   
    
    
    }
